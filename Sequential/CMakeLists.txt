@@ -3,4 +3,4 @@ project(PORR)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(PORR main.cpp socialNet.cpp)
+add_executable(PORR main.cpp Graph.cpp)

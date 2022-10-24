@@ -2,12 +2,14 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include "Graph.h"
 
 void createSocialNetwork(const std::string &fileName)
 {
   std::ifstream fileToRead(fileName);
   std::string line;
   int verticesCount = 0;
+  Graph socialNetwork(verticesCount);
 
   while (std::getline(fileToRead, line))
   {
@@ -20,23 +22,24 @@ void createSocialNetwork(const std::string &fileName)
     if (verticesCount == 0)
     {
       ss.ignore(std::numeric_limits<std::streamsize>::max(), ' ');
-      int vertices, edges;
-      ss >> vertices >> edges;
-      
-      verticesCount = vertices;
-      std::cout << "Vertices: " << vertices << " Edges: " << edges << std::endl;
+      ss >> verticesCount;
+
+      socialNetwork.setVerticesCount(verticesCount);
+      // std::cout << "Vertices: " << verticesCount << std::endl;
     }
     else
     {
       int id, key;
       ss >> id >> key;
+      socialNetwork.addEdges(std::pair(id, key));
 
-      std::cout << "ID: " << id << " Key: " << key << std::endl;
+      // std::cout << "ID: " << id << " Key: " << key << std::endl;
     }
 
     ss.clear();
   }
 
+  std::cout << "Edges count from object: " << socialNetwork.getEdgesCount() << std::endl;
   fileToRead.close();
 }
 
