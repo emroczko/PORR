@@ -1,16 +1,14 @@
 #pragma once
 
 #include <vector>
+#include <map>
 
-class Graph
-{
+class Graph {
 private:
-    int verticesCount;
-    std::vector<std::pair<int, int>> edges;
+    std::map<int, std::vector<int>> friends;
 
 public:
-    Graph(int verticesCount);
-    void addEdges(std::pair<int, int> edge);
-    int getEdgesCount();
+    void addEdge(std::pair<int, int> edge);
+    void countFriends();
     void setVerticesCount(int verticesCount);
 };

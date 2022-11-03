@@ -1,21 +1,21 @@
 #include "Graph.h"
+#include <iostream>
+#include <vector>
+#include <map>
 
-Graph::Graph(int verticesCount)
-{
-    this->verticesCount = verticesCount;
+void Graph::addEdge(std::pair<int, int> edge) {
+    friends[edge.first].push_back(edge.second);
+    friends[edge.second].push_back(edge.first);
 }
 
-void Graph::addEdges(std::pair<int, int> edge)
-{
-    this->edges.push_back(edge);
+void Graph::countFriends() {
+    for (auto &i : this->friends){
+        std::cout << "Person: " << i.first << " has " << i.second.size() << " friends" << std::endl;
+    }
 }
 
-int Graph::getEdgesCount()
-{
-    return this->edges.size();
-}
-
-void Graph::setVerticesCount(int verticesCount)
-{
-    this->verticesCount = verticesCount;
+void Graph::setVerticesCount(int verticesCount) {
+    for (int i = 1; i <= verticesCount; ++i) {
+        this->friends.insert(std::make_pair(i, std::vector<int>()));
+    }
 }
