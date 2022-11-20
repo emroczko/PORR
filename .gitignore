@@ -6,3 +6,10 @@ Spark/gradlew.bat
 Spark/gradlew
 Spark/gradle/wrapper/gradle-wrapper.jar
 Spark/gradle/wrapper/gradle-wrapper.jar
+Sequential/cmake_install.cmake
+Sequential/.DS_Store
+PORR.code-workspace
+.DS_Store
+Sequential/CMakeCache.txt
+Sequential/CMakeFiles
+Sequential/Makefile
