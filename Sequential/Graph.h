@@ -15,5 +15,6 @@ public:
     }
     void addEdge(std::pair<int, int> edge);
     void countFriends();
+    void countFriendsEfficiently(int threads_number);
 };
 

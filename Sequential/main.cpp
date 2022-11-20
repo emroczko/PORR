@@ -6,7 +6,10 @@
 #include <chrono>
 #include "Graph.h"
 
-std::unique_ptr<Graph> createGraphFromFile(const std::string &fileName) {
+#define MAX_THREADS 10
+
+std::unique_ptr<Graph> createGraphFromFile(const std::string &fileName)
+{
   std::ifstream fileToRead(fileName);
   std::string line;
   int verticesCount = 0;
@@ -20,13 +23,15 @@ std::unique_ptr<Graph> createGraphFromFile(const std::string &fileName) {
 
     std::stringstream ss(line);
 
-    if (verticesCount == 0) {
+    if (verticesCount == 0)
+    {
       ss.ignore(std::numeric_limits<std::streamsize>::max(), ' ');
       ss >> verticesCount;
 
       socialNetwork = std::make_unique<Graph>(verticesCount);
     }
-    else {
+    else
+    {
       int id, key;
       ss >> id >> key;
       socialNetwork->addEdge(std::pair(id, key));
@@ -39,14 +44,23 @@ std::unique_ptr<Graph> createGraphFromFile(const std::string &fileName) {
   return std::move(socialNetwork);
 }
 
-int main() {
-    
-    std::unique_ptr<Graph> graph = createGraphFromFile("../Datasets/karate.txt");
+int main()
+{
 
-    auto start = std::chrono::high_resolution_clock::now();
+  std::unique_ptr<Graph> graph = createGraphFromFile("../Datasets/karate.txt");
+
+  for (int threads = 1; threads <= MAX_THREADS; threads++)
+  {
+    auto start_seq = std::chrono::high_resolution_clock::now();
     graph->countFriends();
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
- 
-    std::cout << "Time of sequential processing: " << duration.count() << " microseconds" << std::endl;
+    auto stop_seq = std::chrono::high_resolution_clock::now();
+    auto duration_seq = std::chrono::duration_cast<std::chrono::microseconds>(stop_seq - start_seq);
+    
+    auto start_par = std::chrono::high_resolution_clock::now();
+    graph->countFriendsEfficiently(threads);
+    auto stop_par = std::chrono::high_resolution_clock::now();
+    auto duration_par = std::chrono::duration_cast<std::chrono::microseconds>(stop_par - start_par);
+
+    std::cout << "Sequential : parallel processing: " << duration_seq.count() << " : "<< duration_par.count() << " microseconds" << std::endl;
+  }
 }
