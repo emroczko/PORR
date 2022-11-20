@@ -13,9 +13,3 @@ void Graph::countFriends() {
         std::cout << "Person: " << i.first << " has " << i.second.size() << " friends" << std::endl;
     }
 }
-
-void Graph::setVerticesCount(int verticesCount) {
-    for (int i = 1; i <= verticesCount; ++i) {
-        this->friends.insert(std::make_pair(i, std::vector<int>()));
-    }
-}
