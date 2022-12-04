@@ -14,7 +14,7 @@ void Graph::countFriends() {
 }
 
 void Graph::countFriendsEfficiently(int threads_number) {
-    #pragma omp parallel for num_threads(threads_number)
+    #pragma omp parallel for num_threads(threads_number) collapse(2)
     for (int u = 0; u < vertices_count; u++) {
         int counter = 0;
         for (int v = 0; v < vertices_count; v++)
