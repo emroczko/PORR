@@ -47,7 +47,8 @@ std::unique_ptr<Graph> createGraphFromFile(const std::string &fileName)
 int main()
 {
 
-  std::unique_ptr<Graph> graph = createGraphFromFile("../Datasets/karate.txt");
+  std::unique_ptr<Graph> graph = createGraphFromFile("../Datasets/gplus.txt");
+  std::cout << "Graph created" << std::endl;
 
   for (int threads = 1; threads <= MAX_THREADS; threads++)
   {
