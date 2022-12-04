@@ -3,26 +3,23 @@
 #include <vector>
 #include <map>
 
-void Graph::addEdge(std::pair<int, int> edge) {
-    friends[edge.first].push_back(edge.second);
-    friends[edge.second].push_back(edge.first);
-}
-
 void Graph::countFriends() {
-    std::map<int, int> friends_count;
-
-    for (auto &i : this->friends){
-        friends_count.insert(std::pair(i.first, i.second.size()));
-        //std::cout << "Person: " << i.first << " has " << i.second.size() << " friends" << std::endl;
+    for (int u = 0; u < vertices_count; u++) {
+        int counter = 0;
+        for (int v = 0; v < vertices_count; v++)
+            if (adjacency_matrix[u][v])
+                ++counter;   
+        // std::cout << "Standard: Person: " << u + 1 << " has " << counter << " friends" << std::endl;
     }
 }
 
 void Graph::countFriendsEfficiently(int threads_number) {
-    std::map<int, int> friends_count;
-     
     #pragma omp parallel for num_threads(threads_number)
-    for (auto &i : this->friends){
-        friends_count.insert(std::pair(i.first, i.second.size()));
-        //std::cout << "Person: " << i.first << " has " << i.second.size() << " friends" << std::endl;
+    for (int u = 0; u < vertices_count; u++) {
+        int counter = 0;
+        for (int v = 0; v < vertices_count; v++)
+            ++counter;
+            
+        // std::cout << "Standard: Person: " << u << " has " << counter << " friends" << std::endl;
     }
 }
