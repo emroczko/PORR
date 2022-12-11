@@ -17,14 +17,15 @@ void Graph::countFriends() {
 }
 
 void Graph::countFriendsEfficiently(int threads_number) {
-    #pragma omp parallel for num_threads(threads_number) collapse(2)
+    #pragma omp parallel for num_threads(threads_number)
     for (int u = 0; u < vertices_count; u++) {
         int counter = 0;
-        for (int v = 0; v < vertices_count; v++)
+        for (int v = 0; v < vertices_count; v++) {
             if (adjacency_matrix[u][v]) {
                 ++counter; 
                 // std::cout<< "friend: " << u << " " << v << std::endl;
             }
+        }
         // std::cout << "Standard: Person: " << u << " has " << counter << " friends" << std::endl;
     }
 }
