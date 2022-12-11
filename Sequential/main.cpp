@@ -60,7 +60,7 @@ int main(int argc, char** argv)
   }
 
   std::unique_ptr<Graph> graph = createGraphFromFile("../Datasets/gplus.txt");
-  std::cout << "Graph created" << std::endl;
+  std::cout << "Graph from "<<argv[1]<<" file created" << std::endl;
 
   for (int threads = 1; threads <= MAX_THREADS; threads++)
   {
