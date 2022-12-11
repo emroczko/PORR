@@ -4,6 +4,7 @@
 #include <string>
 #include <memory>
 #include <chrono>
+#include <filesystem>
 #include "Graph.h"
 
 #define MAX_THREADS 10
@@ -44,8 +45,19 @@ std::unique_ptr<Graph> createGraphFromFile(const std::string &fileName)
   return std::move(socialNetwork);
 }
 
-int main()
+int main(int argc, char** argv)
 {
+
+  if (argc != 2 ) {
+    std::cout<<"You have to pass the dataset file name as a 1st argument"<<std::endl;
+    exit(1);
+  }
+
+  std::filesystem::path dataset_path { argv[1] };
+  if (!std::filesystem::exists(dataset_path)) {
+    std::cout<<"Given dataset does not exists!"<<std::endl;
+    exit(1);
+  }
 
   std::unique_ptr<Graph> graph = createGraphFromFile("../Datasets/gplus.txt");
   std::cout << "Graph created" << std::endl;
