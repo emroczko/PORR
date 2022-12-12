@@ -1,3 +1,68 @@
+# PORR - Projekt - częśc sekwencyjna i OpenMP
+
+## Opis zadania
+
+Zadanie polegało na zbudowaniu prostej sieci społecznaej: klucz - ID osoby, wartość – osoba. Następnie program miał umożliwi zwrócenie liczby przyjaciół każdej z osób w sieci w wersji sekwencyjnej oraz równoległej w technologii OpenMP.
+
+## Opis algorytmu
+
+Zadanie wykonano umyślnie algorytmem bardzo słabo wydajnym zarówno pamięciowo, jak i obliczeniowo. 
+
+Siec społeczna została zaimplementowana jako graf nieskierowany. 
+
+Na początku programu wczytywany jest plik z siecią społeczną, następnie po wczytaniu ilości wierzchołków tworzony jest obiekt grafu. Wewnątrz obiektu tworzona jest macierz sąsiedztwa o wymiarze A x A, gdzie A to ilośc wierzchołków. Macierz sąsiedztwa zainicjalizowana jest początkowo wartościami 0. Następnie iterując po następnych linijkach pliku stopniowo dodawane są wartości 1 w odpowiednich miejscach tabeli. Zatem jeśli w pliku mamy następującą definicję:
+```
+1 15
+```
+to znaczy to, że w macierzy w skrzyżowaniu wierszu 1 i 15 kolumny znajdzie się wartośc 1. Z racji celowej niskiej efektywności algorytmu, wartośc 1 pojawi się również w skrzyżowaniu wiersza 15 kolumny 1. 
+
+Po uzupełnieniu macierzy sąsiedztwa program jest gotowy do znalezienia liczby przyjaciół każdej osoby (inaczej - wszystkich węzłów które mają połącznie z danym węzłem). 
+
+Algorytm szukania przyjaciół polega na iteracji wzdłuż wierszy i kolumn w celu szukania wartości 1, czyli w celu szukania połączenia węzłów. Obie pętle mają zakres równy liczbie wierzchołków - jest to zatem zdecydowanie nieefektywne pamięciowo i obliczeniowo rozwiązanie, natomiast jednym z celów tego projektu było pokazanie jak radzi sobie z tym program w wersji sekwencyjnej, a jak program w wersji w technologii OpenMP. 
+
+Dodanie technologii OpenMP polegało na zrównolegleniu pętli szukania przyjaciół. 
+
+## Komentarz dot. wydajności algorytmu
+
+Tak jak zostało wyżej wspomniane, algorytm wykonany jest w wersji nieefektywnej. Potencjalnym polepszeniem było m. in. zmniejszenie macierzy sąsiedztwa o połowę, tak, aby fakt połączenia między wierzchołkami wystąpił tylko raz - obecnie jest raz, symetrycznie. 
+
+Innym rozwiązaniem jest skorzystanie z modelu grafu, jako obiektu "map" z biblioteki standardowej języka C++, gdzie kluczem byłby numer osoby, a wartością byłby wektor przyjaciół. 
+
+Jednak najlepszy efekt różnicy między wersją sekwencyjną, a OpenMP dało wykonanie algorytmu w mniej efektywny sposób.
+
+## Opis techniczny
+
+Zadanie wykonano w języku C++, w wersji conajmniej C++14. W projekcie używana jest technologia OpenMP. 
+
+Projekt budowany jest za pomocą narzędzia CMake. 
+
+Wspierane platformy to Windows oraz macOS. 
+
+Aby uruchomic program, należy przejśc do katalogu z plikami programu, następnie wykonac komendę:
+```
+cmake .
+```
+
+Następnie
+```
+make
+```
+
+Plik wykonywalny jest dostępny pod nazwą PORR. 
+
+Aplikacja po uruchomieniu wykonuje X iteracji, gdzie X to maksymalna ilośc wątków która zdefiniowana jest w programie. W każdej iteracji zwiększa się ilośc wątków, na których pracuje metoda wykorzystująca OpenMP, zaczynając od 1 wątku, aż do X wątków. 
+
+W celu uśrednienia wyników OpenMP, dla każdej liczby wątków (dla każdej iteracji), wykonywane jest kilka uruchomień metody wykorzystującej OpenMP, następnie wyliczana jest średnia z tych prób.  
+
+## Wybrane zbiory danych do testowania 
+
+- rozmiary, jakie pliki 
+  
+## Wyniki testów
+
+- screeny z terminala 
+
+
 Graph from brightkite.txt created
 Sequential : parallel (1 threads) processing: 7.272695 : 7.261419 seconds
 Sequential : parallel (2 threads) processing: 7.657955 : 3.674267 seconds
@@ -102,17 +167,3 @@ Sequential : parallel (17 threads) processing: 0.000006 : 0.000128 seconds
 Sequential : parallel (18 threads) processing: 0.000009 : 0.000243 seconds
 Sequential : parallel (19 threads) processing: 0.000010 : 0.000196 seconds
 Sequential : parallel (20 threads) processing: 0.000008 : 0.000198 seconds
-
-# PORR - Projekt - częśc sekwencyjna
-
-## Opis zadania i algorytmu 
-
-Zrealizowano algorytm zwracający liczbę przyjaciół w sieci społecznej.
-
-## Wybrane zbiory danych do testowania 
-
-- rozmiary, jakie pliki 
-  
-## Wyniki testów
-
-- screeny z terminala 
