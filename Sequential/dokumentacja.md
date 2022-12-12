@@ -50,50 +50,51 @@ result:
     Sequential : parallel processing: 1999 : 1000 microseconds
     Sequential : parallel processing: 1998 : 1006 microseconds
 
-
-    PS C:\Users\Eryk Mroczko\Documents\PORR\Sequential\build> ."C:/Users/Eryk Mroczko/Documents/PORR/Sequential/build/PORR.exe"
 Graph from epinions.txt created
-Sequential : parallel processing: 1.650239 : 1.576624 seconds
-Sequential : parallel processing: 1.671577 : 0.814955 seconds
-Sequential : parallel processing: 1.604099 : 0.539720 seconds
-Sequential : parallel processing: 1.651270 : 0.428937 seconds
-Sequential : parallel processing: 1.593127 : 0.418348 seconds
-Sequential : parallel processing: 1.615517 : 0.414070 seconds
-Sequential : parallel processing: 1.639071 : 0.364896 seconds
-Sequential : parallel processing: 1.576725 : 0.332339 seconds
-Sequential : parallel processing: 1.607859 : 0.343541 seconds
-Sequential : parallel processing: 1.604005 : 0.350803 seconds
+Sequential : parallel processing: 1.640711 : 1.584241 seconds
+Sequential : parallel processing: 1.649672 : 0.845679 seconds
+Sequential : parallel processing: 1.687799 : 0.610344 seconds
+Sequential : parallel processing: 2.181686 : 0.541662 seconds
+Sequential : parallel processing: 1.802336 : 0.624132 seconds
+Sequential : parallel processing: 1.968766 : 0.455976 seconds
+Sequential : parallel processing: 1.812651 : 0.503091 seconds
+Sequential : parallel processing: 1.756948 : 0.423692 seconds
+Sequential : parallel processing: 1.738331 : 0.388190 seconds
+Sequential : parallel processing: 1.758970 : 0.395848 seconds
 Graph from gplus.txt created
-Sequential : parallel processing: 3.581949 : 3.471670 seconds
-Sequential : parallel processing: 3.606759 : 1.822756 seconds
-Sequential : parallel processing: 3.663133 : 1.207502 seconds
-Sequential : parallel processing: 3.583755 : 1.078052 seconds
-Sequential : parallel processing: 3.591426 : 1.192572 seconds
-Sequential : parallel processing: 3.559737 : 0.873894 seconds
-Sequential : parallel processing: 3.547091 : 0.799559 seconds
-Sequential : parallel processing: 3.539956 : 0.791176 seconds
-Sequential : parallel processing: 3.556836 : 0.774605 seconds
-Sequential : parallel processing: 3.578564 : 0.752339 seconds
+Sequential : parallel processing: 3.778306 : 3.503767 seconds
+Sequential : parallel processing: 3.604001 : 1.804879 seconds
+Sequential : parallel processing: 3.643435 : 1.242366 seconds
+Sequential : parallel processing: 3.614842 : 1.032280 seconds
+Sequential : parallel processing: 3.684456 : 0.985530 seconds
+Sequential : parallel processing: 3.956569 : 0.957183 seconds
+Sequential : parallel processing: 3.604379 : 0.784670 seconds
+Sequential : parallel processing: 3.786358 : 0.793856 seconds
+Sequential : parallel processing: 3.777569 : 0.782897 seconds
+Sequential : parallel processing: 3.854633 : 0.747299 seconds
 Graph from wiki-vote.txt created
-Sequential : parallel processing: 0.001949 : 0.001870 seconds
-Sequential : parallel processing: 0.001930 : 0.001465 seconds
-Sequential : parallel processing: 0.001899 : 0.000803 seconds
-Sequential : parallel processing: 0.001876 : 0.000669 seconds
-Sequential : parallel processing: 0.001871 : 0.000755 seconds
-Sequential : parallel processing: 0.002094 : 0.000676 seconds
-Sequential : parallel processing: 0.002072 : 0.001415 seconds
-Sequential : parallel processing: 0.002052 : 0.000969 seconds
-Sequential : parallel processing: 0.002059 : 0.000809 seconds
-Sequential : parallel processing: 0.001934 : 0.000718 seconds
+Sequential : parallel processing: 0.002008 : 0.001897 seconds
+Sequential : parallel processing: 0.002015 : 0.001375 seconds
+Sequential : parallel processing: 0.002087 : 0.000833 seconds
+Sequential : parallel processing: 0.001890 : 0.000664 seconds
+Sequential : parallel processing: 0.001940 : 0.000768 seconds
+Sequential : parallel processing: 0.002163 : 0.000680 seconds
+Sequential : parallel processing: 0.002062 : 0.000642 seconds
+Sequential : parallel processing: 0.002036 : 0.000908 seconds
+Sequential : parallel processing: 0.002425 : 0.000824 seconds
+Sequential : parallel processing: 0.001883 : 0.000748 seconds
 Graph from karate.txt created
-Sequential : parallel processing: 0.000005 : 0.000023 seconds
-Sequential : parallel processing: 0.000005 : 0.000068 seconds
-Sequential : parallel processing: 0.000006 : 0.000176 seconds
-Sequential : parallel processing: 0.000005 : 0.000188 seconds
-Sequential : parallel processing: 0.000005 : 0.000178 seconds
-Sequential : parallel processing: 0.000007 : 0.000293 seconds
-Sequential : parallel processing: 0.000006 : 0.000253 seconds
-Sequential : parallel processing: 0.000006 : 0.000240 seconds
+Sequential : parallel processing: 0.000006 : 0.000025 seconds
+Sequential : parallel processing: 0.000006 : 0.000079 seconds
+Sequential : parallel processing: 0.000005 : 0.000184 seconds
+Sequential : parallel processing: 0.000005 : 0.000192 seconds
+Sequential : parallel processing: 0.000005 : 0.000210 seconds
+Sequential : parallel processing: 0.000007 : 0.000297 seconds
+Sequential : parallel processing: 0.000008 : 0.000305 seconds
+Sequential : parallel processing: 0.000007 : 0.000300 seconds
+Sequential : parallel processing: 0.000008 : 0.000290 seconds
+Sequential : parallel processing: 0.000006 : 0.000231 seconds
+PS C:\Users\Eryk Mroczko\Documents\PORR\Sequential\build>
 
 # PORR - Projekt - częśc sekwencyjna
 
