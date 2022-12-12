@@ -1,100 +1,107 @@
-data set: gplus
-result:
-    Sequential : parallel processing: 2429 : 2223 miliseconds
-    Sequential : parallel processing: 2478 : 1226 miliseconds
-    Sequential : parallel processing: 2602 : 872 miliseconds
-    Sequential : parallel processing: 2560 : 561 miliseconds
-    Sequential : parallel processing: 2568 : 497 miliseconds
-    Sequential : parallel processing: 2832 : 478 miliseconds
-    Sequential : parallel processing: 2310 : 408 miliseconds
-    Sequential : parallel processing: 2325 : 412 miliseconds
-    Sequential : parallel processing: 2681 : 398 miliseconds
-    Sequential : parallel processing: 2407 : 409 miliseconds
-
-data set: karate
-result:
-    Sequential : parallel processing: 0 : 0 microseconds
-    Sequential : parallel processing: 0 : 0 microseconds
-    Sequential : parallel processing: 0 : 0 microseconds
-    Sequential : parallel processing: 0 : 0 microseconds
-    Sequential : parallel processing: 0 : 0 microseconds
-    Sequential : parallel processing: 0 : 999 microseconds
-    Sequential : parallel processing: 0 : 0 microseconds
-    Sequential : parallel processing: 0 : 0 microseconds
-    Sequential : parallel processing: 0 : 999 microseconds
-    Sequential : parallel processing: 0 : 1000 microseconds
-
-data set: epinions
-result:
-    Sequential : parallel processing: 1082 : 1086 milliseconds
-    Sequential : parallel processing: 1235 : 554 milliseconds
-    Sequential : parallel processing: 1054 : 369 milliseconds
-    Sequential : parallel processing: 1150 : 259 milliseconds
-    Sequential : parallel processing: 1121 : 225 milliseconds
-    Sequential : parallel processing: 1210 : 185 milliseconds
-    Sequential : parallel processing: 1241 : 176 milliseconds
-    Sequential : parallel processing: 1242 : 221 milliseconds
-    Sequential : parallel processing: 1240 : 172 milliseconds
-    Sequential : parallel processing: 1231 : 183 milliseconds
-
-data set: wiki-vote
-result:
-    Sequential : parallel processing: 1000 : 1994 microseconds
-    Sequential : parallel processing: 1001 : 1997 microseconds
-    Sequential : parallel processing: 1010 : 993 microseconds
-    Sequential : parallel processing: 997 : 998 microseconds
-    Sequential : parallel processing: 2000 : 1005 microseconds
-    Sequential : parallel processing: 1000 : 1002 microseconds
-    Sequential : parallel processing: 1999 : 0 microseconds
-    Sequential : parallel processing: 2000 : 0 microseconds
-    Sequential : parallel processing: 1999 : 1000 microseconds
-    Sequential : parallel processing: 1998 : 1006 microseconds
-
+Graph from brightkite.txt created
+Sequential : parallel (1 threads) processing: 7.272695 : 7.261419 seconds
+Sequential : parallel (2 threads) processing: 7.657955 : 3.674267 seconds
+Sequential : parallel (3 threads) processing: 7.391224 : 2.495635 seconds
+Sequential : parallel (4 threads) processing: 7.308102 : 1.898305 seconds
+Sequential : parallel (5 threads) processing: 7.395851 : 1.949229 seconds
+Sequential : parallel (6 threads) processing: 7.329522 : 1.831887 seconds
+Sequential : parallel (7 threads) processing: 7.209378 : 1.639940 seconds
+Sequential : parallel (8 threads) processing: 7.201938 : 1.517516 seconds
+Sequential : parallel (9 threads) processing: 7.310027 : 1.564583 seconds
+Sequential : parallel (10 threads) processing: 7.311517 : 1.548408 seconds
+Sequential : parallel (11 threads) processing: 7.204523 : 1.538109 seconds
+Sequential : parallel (12 threads) processing: 7.261726 : 1.521996 seconds
+Sequential : parallel (13 threads) processing: 7.358666 : 1.529637 seconds
+Sequential : parallel (14 threads) processing: 7.329594 : 1.519246 seconds
+Sequential : parallel (15 threads) processing: 7.226848 : 1.519507 seconds
+Sequential : parallel (16 threads) processing: 7.360881 : 1.515217 seconds
+Sequential : parallel (17 threads) processing: 7.340094 : 1.508764 seconds
+Sequential : parallel (18 threads) processing: 7.338121 : 1.529946 seconds
+Sequential : parallel (19 threads) processing: 7.330441 : 1.521444 seconds
+Sequential : parallel (20 threads) processing: 7.386670 : 1.511014 seconds
 Graph from epinions.txt created
-Sequential : parallel processing: 1.640711 : 1.584241 seconds
-Sequential : parallel processing: 1.649672 : 0.845679 seconds
-Sequential : parallel processing: 1.687799 : 0.610344 seconds
-Sequential : parallel processing: 2.181686 : 0.541662 seconds
-Sequential : parallel processing: 1.802336 : 0.624132 seconds
-Sequential : parallel processing: 1.968766 : 0.455976 seconds
-Sequential : parallel processing: 1.812651 : 0.503091 seconds
-Sequential : parallel processing: 1.756948 : 0.423692 seconds
-Sequential : parallel processing: 1.738331 : 0.388190 seconds
-Sequential : parallel processing: 1.758970 : 0.395848 seconds
+Sequential : parallel (1 threads) processing: 1.634551 : 1.572193 seconds
+Sequential : parallel (2 threads) processing: 1.630362 : 0.851774 seconds
+Sequential : parallel (3 threads) processing: 1.632409 : 0.546061 seconds
+Sequential : parallel (4 threads) processing: 1.628490 : 0.431503 seconds
+Sequential : parallel (5 threads) processing: 1.613139 : 0.445833 seconds
+Sequential : parallel (6 threads) processing: 1.649122 : 0.391858 seconds
+Sequential : parallel (7 threads) processing: 1.617535 : 0.366014 seconds
+Sequential : parallel (8 threads) processing: 1.613619 : 0.335597 seconds
+Sequential : parallel (9 threads) processing: 1.609780 : 0.361808 seconds
+Sequential : parallel (10 threads) processing: 1.613295 : 0.350453 seconds
+Sequential : parallel (11 threads) processing: 1.616510 : 0.344258 seconds
+Sequential : parallel (12 threads) processing: 1.616022 : 0.343435 seconds
+Sequential : parallel (13 threads) processing: 1.610437 : 0.339843 seconds
+Sequential : parallel (14 threads) processing: 1.611172 : 0.343956 seconds
+Sequential : parallel (15 threads) processing: 1.607618 : 0.340837 seconds
+Sequential : parallel (16 threads) processing: 1.616278 : 0.342746 seconds
+Sequential : parallel (17 threads) processing: 1.613513 : 0.339682 seconds
+Sequential : parallel (18 threads) processing: 1.616090 : 0.338624 seconds
+Sequential : parallel (19 threads) processing: 1.612287 : 0.339361 seconds
+Sequential : parallel (20 threads) processing: 1.614702 : 0.335401 seconds
 Graph from gplus.txt created
-Sequential : parallel processing: 3.778306 : 3.503767 seconds
-Sequential : parallel processing: 3.604001 : 1.804879 seconds
-Sequential : parallel processing: 3.643435 : 1.242366 seconds
-Sequential : parallel processing: 3.614842 : 1.032280 seconds
-Sequential : parallel processing: 3.684456 : 0.985530 seconds
-Sequential : parallel processing: 3.956569 : 0.957183 seconds
-Sequential : parallel processing: 3.604379 : 0.784670 seconds
-Sequential : parallel processing: 3.786358 : 0.793856 seconds
-Sequential : parallel processing: 3.777569 : 0.782897 seconds
-Sequential : parallel processing: 3.854633 : 0.747299 seconds
+Sequential : parallel (1 threads) processing: 3.519302 : 3.418041 seconds
+Sequential : parallel (2 threads) processing: 3.484430 : 1.742770 seconds
+Sequential : parallel (3 threads) processing: 3.496732 : 1.185856 seconds
+Sequential : parallel (4 threads) processing: 3.476252 : 0.920324 seconds
+Sequential : parallel (5 threads) processing: 3.508131 : 0.960810 seconds
+Sequential : parallel (6 threads) processing: 3.506912 : 0.863679 seconds
+Sequential : parallel (7 threads) processing: 3.441866 : 0.789904 seconds
+Sequential : parallel (8 threads) processing: 3.545531 : 0.724816 seconds
+Sequential : parallel (9 threads) processing: 3.512662 : 0.753753 seconds
+Sequential : parallel (10 threads) processing: 3.517510 : 0.742792 seconds
+Sequential : parallel (11 threads) processing: 3.509618 : 0.742069 seconds
+Sequential : parallel (12 threads) processing: 3.709940 : 0.736082 seconds
+Sequential : parallel (13 threads) processing: 3.508767 : 0.726618 seconds
+Sequential : parallel (14 threads) processing: 3.512315 : 0.732999 seconds
+Sequential : parallel (15 threads) processing: 3.446164 : 0.730343 seconds
+Sequential : parallel (16 threads) processing: 3.510076 : 0.729927 seconds
+Sequential : parallel (17 threads) processing: 3.511995 : 0.728040 seconds
+Sequential : parallel (18 threads) processing: 3.519717 : 0.727709 seconds
+Sequential : parallel (19 threads) processing: 3.503685 : 0.727050 seconds
+Sequential : parallel (20 threads) processing: 3.515461 : 0.731463 seconds
 Graph from wiki-vote.txt created
-Sequential : parallel processing: 0.002008 : 0.001897 seconds
-Sequential : parallel processing: 0.002015 : 0.001375 seconds
-Sequential : parallel processing: 0.002087 : 0.000833 seconds
-Sequential : parallel processing: 0.001890 : 0.000664 seconds
-Sequential : parallel processing: 0.001940 : 0.000768 seconds
-Sequential : parallel processing: 0.002163 : 0.000680 seconds
-Sequential : parallel processing: 0.002062 : 0.000642 seconds
-Sequential : parallel processing: 0.002036 : 0.000908 seconds
-Sequential : parallel processing: 0.002425 : 0.000824 seconds
-Sequential : parallel processing: 0.001883 : 0.000748 seconds
+Sequential : parallel (1 threads) processing: 0.002180 : 0.001878 seconds
+Sequential : parallel (2 threads) processing: 0.001888 : 0.001037 seconds
+Sequential : parallel (3 threads) processing: 0.001929 : 0.000823 seconds
+Sequential : parallel (4 threads) processing: 0.002271 : 0.000726 seconds
+Sequential : parallel (6 threads) processing: 0.002256 : 0.000672 seconds
+Sequential : parallel (7 threads) processing: 0.002503 : 0.000617 seconds
+Sequential : parallel (8 threads) processing: 0.001913 : 0.000578 seconds
+Sequential : parallel (9 threads) processing: 0.002661 : 0.000725 seconds
+Sequential : parallel (10 threads) processing: 0.001961 : 0.000669 seconds
+Sequential : parallel (11 threads) processing: 0.002739 : 0.000683 seconds
+Sequential : parallel (12 threads) processing: 0.001922 : 0.000630 seconds
+Sequential : parallel (13 threads) processing: 0.002445 : 0.000621 seconds
+Sequential : parallel (14 threads) processing: 0.001960 : 0.000537 seconds
+Sequential : parallel (15 threads) processing: 0.002552 : 0.000707 seconds
+Sequential : parallel (16 threads) processing: 0.001919 : 0.000547 seconds
+Sequential : parallel (17 threads) processing: 0.002669 : 0.000683 seconds
+Sequential : parallel (18 threads) processing: 0.002095 : 0.000601 seconds
+Sequential : parallel (19 threads) processing: 0.002359 : 0.000655 seconds
+Sequential : parallel (20 threads) processing: 0.001979 : 0.000620 seconds
 Graph from karate.txt created
-Sequential : parallel processing: 0.000006 : 0.000025 seconds
-Sequential : parallel processing: 0.000006 : 0.000079 seconds
-Sequential : parallel processing: 0.000005 : 0.000184 seconds
-Sequential : parallel processing: 0.000005 : 0.000192 seconds
-Sequential : parallel processing: 0.000005 : 0.000210 seconds
-Sequential : parallel processing: 0.000007 : 0.000297 seconds
-Sequential : parallel processing: 0.000008 : 0.000305 seconds
-Sequential : parallel processing: 0.000007 : 0.000300 seconds
-Sequential : parallel processing: 0.000008 : 0.000290 seconds
-Sequential : parallel processing: 0.000006 : 0.000231 seconds
-PS C:\Users\Eryk Mroczko\Documents\PORR\Sequential\build>
+Sequential : parallel (1 threads) processing: 0.000009 : 0.000031 seconds
+Sequential : parallel (2 threads) processing: 0.000006 : 0.000100 seconds
+Sequential : parallel (3 threads) processing: 0.000005 : 0.000083 seconds
+Sequential : parallel (4 threads) processing: 0.000006 : 0.000110 seconds
+Sequential : parallel (5 threads) processing: 0.000006 : 0.000087 seconds
+Sequential : parallel (6 threads) processing: 0.000005 : 0.000099 seconds
+Sequential : parallel (7 threads) processing: 0.000013 : 0.000181 seconds
+Sequential : parallel (8 threads) processing: 0.000006 : 0.000111 seconds
+Sequential : parallel (9 threads) processing: 0.000006 : 0.000098 seconds
+Sequential : parallel (10 threads) processing: 0.000006 : 0.000121 seconds
+Sequential : parallel (11 threads) processing: 0.000011 : 0.000160 seconds
+Sequential : parallel (12 threads) processing: 0.000012 : 0.000187 seconds
+Sequential : parallel (13 threads) processing: 0.000006 : 0.000112 seconds
+Sequential : parallel (14 threads) processing: 0.000006 : 0.000110 seconds
+Sequential : parallel (15 threads) processing: 0.000009 : 0.000174 seconds
+Sequential : parallel (16 threads) processing: 0.000008 : 0.000185 seconds
+Sequential : parallel (17 threads) processing: 0.000006 : 0.000128 seconds
+Sequential : parallel (18 threads) processing: 0.000009 : 0.000243 seconds
+Sequential : parallel (19 threads) processing: 0.000010 : 0.000196 seconds
+Sequential : parallel (20 threads) processing: 0.000008 : 0.000198 seconds
 
 # PORR - Projekt - częśc sekwencyjna
 
@@ -109,14 +116,3 @@ Zrealizowano algorytm zwracający liczbę przyjaciół w sieci społecznej.
 ## Wyniki testów
 
 - screeny z terminala 
-Graph from ../Datasets/gplus.txt file created
-Sequential : parallel processing: 4078676 : 45041035 microseconds
-Sequential : parallel processing: 3908208 : 22023981 microseconds
-Sequential : parallel processing: 3761712 : 14835212 microseconds
-Sequential : parallel processing: 3760867 : 11619297 microseconds
-Sequential : parallel processing: 3761283 : 11515994 microseconds
-Sequential : parallel processing: 3749056 : 11524153 microseconds
-Sequential : parallel processing: 3777459 : 11506898 microseconds
-Sequential : parallel processing: 3755940 : 11448705 microseconds
-Sequential : parallel processing: 3759834 : 11501930 microseconds
-Sequential : parallel processing: 3764801 : 11719140 microseconds
