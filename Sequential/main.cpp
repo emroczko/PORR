@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <numeric>
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -7,7 +9,8 @@
 #include <iomanip>
 #include "Graph.h"
 
-#define MAX_THREADS 10
+#define MAX_THREADS 20
+#define ITER 5
 
 std::unique_ptr<Graph> createGraphFromFile(const std::string &fileName)
 {
@@ -55,9 +58,10 @@ inline bool exists (const std::string& name) {
 
 int main(int argc, char** argv)
 {
-  std::string path_to_datasets = "insert-path-to-datasets-here";
+  std::string path_to_datasets = "C:\\Users\\Eryk Mroczko\\Documents\\PORR\\Datasets\\";
   
   std::vector<std::string> file_names { 
+                                        "brightkite.txt",
                                         "epinions.txt", 
                                         "gplus.txt", 
                                         "wiki-vote.txt", 
@@ -83,16 +87,26 @@ int main(int argc, char** argv)
       auto stop_seq = std::chrono::high_resolution_clock::now();
       auto duration_seq = std::chrono::duration_cast<std::chrono::microseconds>(stop_seq - start_seq);
       
-      auto start_par = std::chrono::high_resolution_clock::now();
-      graph->countFriendsEfficiently(threads);
-      auto stop_par = std::chrono::high_resolution_clock::now();
-      auto duration_par = std::chrono::duration_cast<std::chrono::microseconds>(stop_par - start_par);
+      float mean_parallel = 0.0;
+      std::vector<float> parallels;
+      for (int i = 1; i <= ITER; i++) {
+        auto start_par = std::chrono::high_resolution_clock::now();
+        graph->countFriendsEfficiently(threads);
+        auto stop_par = std::chrono::high_resolution_clock::now();
+        auto duration_par = std::chrono::duration_cast<std::chrono::microseconds>(stop_par - start_par);
+
+        float parallel = static_cast<float>(duration_par.count()) / 1000000;
+
+        parallels.push_back(parallel);
+      }
+
+      auto const count = static_cast<float>(parallels.size());
+      mean_parallel = std::reduce(parallels.begin(), parallels.end()) / count;
 
       float sequential = static_cast<float>(duration_seq.count()) / 1000000;
-      float parallel = static_cast<float>(duration_par.count()) / 1000000;
 
       std::cout << std::fixed << std::setprecision(6)
-      << "Sequential : parallel processing: "<< sequential << " : "<< parallel << " seconds" << std::endl;
+      << "Sequential : parallel (" << threads <<" threads) processing: "<< sequential << " : "<< mean_parallel << " seconds" << std::endl;
     }
   }
 }
