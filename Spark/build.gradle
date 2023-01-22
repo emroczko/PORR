@@ -19,10 +19,17 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation(
+            'org.springframework.boot:spring-boot-starter',
+            'org.apache.spark:spark-sql_2.12:3.2.2',
+            'org.codehaus.janino:commons-compiler:3.0.16', // DONT UPGRADE
+            'org.codehaus.janino:janino:3.0.16' // DONT UPGRADE
+    )
     compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor(
+            'org.springframework.boot:spring-boot-configuration-processor',
+            'org.projectlombok:lombok'
+    )
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
